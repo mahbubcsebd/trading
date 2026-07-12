@@ -13,12 +13,12 @@ export default function ForexQuizPage({ searchParams }) {
     return <QuizClient quizData={quizData} />;
   } catch (error) {
     return (
-      <div className="flex items-center justify-center min-h-screen text-center p-4">
+      <div className="flex items-center justify-center min-h-screen text-center p-4 bg-primary text-content-primary">
         <div>
-          <h1 className="text-2xl font-bold mb-4" style={{ color: "var(--text-primary)" }}>
+          <h1 className="text-2xl font-bold mb-4">
             কুইজটি পাওয়া যায়নি
           </h1>
-          <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+          <p className="text-sm text-content-secondary">
             সম্ভবত এই অধ্যায়ের জন্য এখনও কোনো কুইজ তৈরি করা হয়নি।
           </p>
         </div>

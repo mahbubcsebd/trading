@@ -39,15 +39,14 @@ export function QuizClient({ quizData }) {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg-primary)" }}>
+    <div className="min-h-screen bg-primary">
       <Navbar />
 
-      <main className="max-w-3xl mx-auto py-10 px-4">
+      <main className="max-w-3xl mx-auto py-8 md:py-10 px-4">
         {/* Back Link */}
         <Link
           href={`/forex?topic=${quizData.topicId}`}
-          className="inline-flex items-center gap-2 mb-8 text-sm font-semibold transition-opacity hover:opacity-80"
-          style={{ color: "var(--text-secondary)" }}
+          className="inline-flex items-center gap-2 mb-8 text-sm font-semibold transition-opacity hover:opacity-80 text-content-secondary hover:text-content-primary"
         >
           <ArrowLeft className="w-4 h-4" />
           নোটস-এ ফিরে যান
@@ -55,32 +54,30 @@ export function QuizClient({ quizData }) {
 
         {/* Header */}
         <div className="mb-10 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-2 text-accent">
             মেধা যাচাই
           </p>
-          <h1 className="text-3xl font-bold mb-3" style={{ color: "var(--text-primary)" }}>
+          <h1 className="text-2xl md:text-3xl font-bold mb-3 text-content-primary">
             {quizData.title}
           </h1>
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+          <p className="text-sm text-content-muted">
             {quizData.description}
           </p>
         </div>
 
         {/* Score Card (Shows only after submit) */}
         {isSubmitted && (
-          <div className="mb-12 p-8 rounded-2xl text-center flex flex-col items-center"
-            style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
-            <div className="text-5xl font-black mb-2" style={{ color: score === quizData.questions.length ? "#22c55e" : "var(--accent)" }}>
-              {score} <span className="text-2xl" style={{ color: "var(--text-muted)" }}>/ {quizData.questions.length}</span>
+          <div className="mb-12 p-6 md:p-8 rounded-2xl text-center flex flex-col items-center bg-surface border border-border">
+            <div className={`text-4xl md:text-5xl font-black mb-2 ${score === quizData.questions.length ? "text-green-500" : "text-accent"}`}>
+              {score} <span className="text-2xl text-content-muted">/ {quizData.questions.length}</span>
             </div>
-            <p className="text-sm font-medium mb-6" style={{ color: "var(--text-secondary)" }}>
+            <p className="text-sm font-medium mb-6 text-content-secondary">
               {score === quizData.questions.length ? "অসাধারণ! আপনি সব সঠিক উত্তর দিয়েছেন।" : "কিছু ভুল হয়েছে, নিচে ব্যাখ্যাগুলো দেখে নিন।"}
             </p>
             <div className="flex gap-4">
               <button
                 onClick={handleRetake}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all"
-                style={{ background: "var(--bg-surface-2)", color: "var(--text-primary)" }}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface-2 text-content-primary hover:bg-border"
               >
                 <RefreshCcw className="w-4 h-4" />
                 আবার চেষ্টা করুন
@@ -96,10 +93,9 @@ export function QuizClient({ quizData }) {
             const isCorrect = selectedIdx === q.correctAnswer;
 
             return (
-              <div key={q.id} className="p-6 rounded-2xl"
-                style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
-                <h3 className="text-lg font-bold mb-5 leading-relaxed" style={{ color: "var(--text-primary)" }}>
-                  <span style={{ color: "var(--accent)" }}>{idx + 1}. </span> {q.question}
+              <div key={q.id} className="p-5 md:p-6 rounded-2xl bg-surface border border-border">
+                <h3 className="text-base md:text-lg font-bold mb-5 leading-relaxed text-content-primary">
+                  <span className="text-accent">{idx + 1}. </span> {q.question}
                 </h3>
 
                 <div className="space-y-3">
@@ -108,28 +104,22 @@ export function QuizClient({ quizData }) {
                     const isCorrectOption = optIdx === q.correctAnswer;
 
                     // Determine styling based on state
-                    let bg = "var(--bg-primary)";
-                    let borderColor = "var(--border)";
-                    let textColor = "var(--text-secondary)";
+                    let buttonClasses = "bg-primary border-border text-content-secondary";
                     let icon = null;
 
                     if (isSubmitted) {
                       if (isCorrectOption) {
-                        bg = "color-mix(in srgb, #22c55e 10%, transparent)";
-                        borderColor = "#22c55e";
-                        textColor = "var(--text-primary)";
+                        buttonClasses = "bg-green-500/10 border-green-500 text-content-primary";
                         icon = <CheckCircle2 className="w-5 h-5 shrink-0 text-green-500" />;
                       } else if (isSelected && !isCorrectOption) {
-                        bg = "color-mix(in srgb, #ef4444 10%, transparent)";
-                        borderColor = "#ef4444";
-                        textColor = "var(--text-primary)";
+                        buttonClasses = "bg-red-500/10 border-red-500 text-content-primary";
                         icon = <XCircle className="w-5 h-5 shrink-0 text-red-500" />;
                       }
                     } else {
                       if (isSelected) {
-                        bg = "color-mix(in srgb, var(--accent) 10%, transparent)";
-                        borderColor = "var(--accent)";
-                        textColor = "var(--accent)";
+                        buttonClasses = "bg-accent/10 border-accent text-accent";
+                      } else {
+                        buttonClasses += " hover:border-accent/50 hover:bg-surface-2";
                       }
                     }
 
@@ -138,13 +128,7 @@ export function QuizClient({ quizData }) {
                         key={optIdx}
                         onClick={() => handleOptionSelect(q.id, optIdx)}
                         disabled={isSubmitted}
-                        className="w-full text-left p-4 rounded-xl flex items-center justify-between gap-4 transition-all"
-                        style={{
-                          background: bg,
-                          border: `2px solid ${borderColor}`,
-                          color: textColor,
-                          cursor: isSubmitted ? "default" : "pointer"
-                        }}
+                        className={`w-full text-left p-4 rounded-xl flex items-center justify-between gap-4 transition-all border-2 ${buttonClasses} ${isSubmitted ? "cursor-default" : "cursor-pointer"}`}
                       >
                         <span className="font-medium text-sm leading-relaxed">{opt}</span>
                         {icon}
@@ -155,10 +139,9 @@ export function QuizClient({ quizData }) {
 
                 {/* Explanation (Shows after submit) */}
                 {isSubmitted && (
-                  <div className="mt-6 p-4 rounded-xl text-sm leading-relaxed"
-                    style={{ background: "var(--bg-surface-2)", borderLeft: "4px solid var(--accent)" }}>
-                    <strong className="block mb-1" style={{ color: "var(--text-primary)" }}>ব্যাখ্যা:</strong>
-                    <span style={{ color: "var(--text-secondary)" }}>{q.explanation}</span>
+                  <div className="mt-6 p-4 rounded-xl text-sm leading-relaxed bg-surface-2 border-l-4 border-accent">
+                    <strong className="block mb-1 text-content-primary">ব্যাখ্যা:</strong>
+                    <span className="text-content-secondary">{q.explanation}</span>
                   </div>
                 )}
               </div>
@@ -171,8 +154,7 @@ export function QuizClient({ quizData }) {
           <div className="mt-12 text-center">
             <button
               onClick={handleSubmit}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-bold transition-all shadow-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-              style={{ background: "var(--accent)", boxShadow: "0 4px 16px color-mix(in srgb, var(--accent) 35%, transparent)" }}
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-bold transition-all shadow-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed bg-accent shadow-accent/35 w-full sm:w-auto justify-center"
             >
               উত্তর জমা দিন
               <CheckCircle2 className="w-5 h-5" />
@@ -182,11 +164,10 @@ export function QuizClient({ quizData }) {
 
         {/* Next Topic Button (Shows after submit) */}
         {isSubmitted && (
-          <div className="mt-12 text-center border-t pt-8" style={{ borderColor: "var(--border)" }}>
+          <div className="mt-12 text-center border-t border-border pt-8">
             <Link
               href="/forex"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold transition-all"
-              style={{ background: "var(--text-primary)", color: "var(--bg-primary)" }}
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold transition-all bg-content-primary text-primary hover:opacity-90 w-full sm:w-auto justify-center"
             >
               পরবর্তী অধ্যায়ে যান
               <ArrowRight className="w-5 h-5" />
