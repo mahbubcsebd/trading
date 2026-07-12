@@ -1,0 +1,144 @@
+{
+  "module": "ফরেক্স ট্রেডিং",
+  "slug": "forex",
+  "topics": [
+    {
+      "id": "intro",
+      "title": "ফরেক্স পরিচিতি ও রিস্ক ডিসক্লেইমার",
+      "slug": "intro",
+      "description": "ফরেক্স কী, কারেন্সি পেয়ার, পিপ, লট, লিভারেজ, Bid/Ask, Spread, Margin এবং ফরেক্স মার্কেটের বাস্তব ঝুঁকি ও সচেতনতা"
+    },
+    {
+      "id": "broker-mt5",
+      "title": "ব্রোকার এবং MT5",
+      "slug": "broker-mt5",
+      "description": "Exness-এ ডেমো অ্যাকাউন্ট খোলা, MT5 ইন্টারফেস, চার্ট, Market Watch ও Navigator-এর পরিচিতি"
+    },
+    {
+      "id": "candlestick",
+      "title": "ক্যান্ডেলস্টিক বেসিক",
+      "slug": "candlestick",
+      "description": "ক্যান্ডেলস্টিক কী, Open, High, Low, Close (OHLC), Bullish ও Bearish ক্যান্ডেল পড়া"
+    },
+    {
+      "id": "timeframes",
+      "title": "টাইমফ্রেম",
+      "slug": "timeframes",
+      "description": "M1, M5, M15, M30, H1, H4, D1, W1 ও MN টাইমফ্রেমের ব্যবহার এবং কোন পরিস্থিতিতে কোনটি উপযুক্ত"
+    },
+    {
+      "id": "market-structure",
+      "title": "মার্কেট স্ট্রাকচার ও লিকুইডিটি",
+      "slug": "market-structure",
+      "description": "Higher High (HH), Higher Low (HL), Lower High (LH), Lower Low (LL), Break of Structure (BOS), Change of Character (CHoCH) এবং বেসিক লিকুইডিটি ধারণা"
+    },
+    {
+      "id": "support-resistance",
+      "title": "সাপোর্ট ও রেসিস্ট্যান্স",
+      "slug": "support-resistance",
+      "description": "মেঝে ও ছাদের ধারণা, চার্টে সাপোর্ট-রেসিস্ট্যান্স আঁকা, ব্রেকআউট ও রোল রিভার্সাল"
+    },
+    {
+      "id": "trendlines-channels",
+      "title": "ট্রেন্ডলাইন ও চ্যানেল",
+      "slug": "trendlines-channels",
+      "description": "আপট্রেন্ড, ডাউনট্রেন্ড, ট্রেন্ডলাইন আঁকা এবং প্রাইস চ্যানেল ব্যবহার"
+    },
+    {
+      "id": "candlestick-patterns",
+      "title": "গুরুত্বপূর্ণ ক্যান্ডেলস্টিক প্যাটার্ন",
+      "slug": "candlestick-patterns",
+      "description": "Pin Bar, Engulfing, Doji, Morning Star, Evening Star, Hammer, Shooting Star"
+    },
+    {
+      "id": "chart-patterns",
+      "title": "চার্ট প্যাটার্ন",
+      "slug": "chart-patterns",
+      "description": "Double Top, Double Bottom, Head & Shoulders, Triangle, Flag, Pennant ও Wedge Pattern"
+    },
+    {
+      "id": "indicators",
+      "title": "ট্রেডিং ইন্ডিকেটর",
+      "slug": "indicators",
+      "description": "Moving Average, RSI, MACD, Bollinger Bands-এর সহজ ব্যবহার এবং টেকনিক্যাল কনফার্মেশন নেওয়া"
+    },
+    {
+      "id": "price-action",
+      "title": "প্রাইস অ্যাকশন ও কনফ্লুয়েন্স",
+      "slug": "price-action",
+      "description": "ক্যান্ডেলস্টিক, মার্কেট স্ট্রাকচার, ইন্ডিকেটর ও সাপোর্ট-রেসিস্ট্যান্স একসাথে ব্যবহার করে মাল্টিপল কনফার্মেশন বা ট্রেড বিশ্লেষণ"
+    },
+    {
+      "id": "order-types",
+      "title": "অর্ডার টাইপ ও এন্ট্রি মেকানিজম",
+      "slug": "order-types",
+      "description": "Market Order, Buy Limit, Sell Limit, Buy Stop, Sell Stop, Stop Limit এবং Pending Order-এর ব্যবহার"
+    },
+    {
+      "id": "trading-sessions",
+      "title": "ট্রেডিং সেশন ও সময়",
+      "slug": "trading-sessions",
+      "description": "Sydney, Tokyo, London, New York Session, Session Overlap এবং ভোলাটিলিটির সঠিক সময়"
+    },
+    {
+      "id": "market-analysis",
+      "title": "মার্কেট অ্যানালাইসিস",
+      "slug": "market-analysis",
+      "description": "Fundamental Analysis, Technical Analysis এবং Sentiment Analysis-এর পরিচিতি ও সমন্বয়"
+    },
+    {
+      "id": "economic-calendar",
+      "title": "ইকোনমিক ক্যালেন্ডার ও নিউজ",
+      "slug": "economic-calendar",
+      "description": "Economic Calendar পড়া, High Impact News, NFP, CPI, Interest Rate, FOMC এবং নিউজের সময় ট্রেডিং সতর্কতা"
+    },
+    {
+      "id": "lot-size-calculation",
+      "title": "লট সাইজ ক্যালকুলেশন",
+      "slug": "lot-size-calculation",
+      "description": "Standard Lot, Mini Lot, Micro Lot, Pip Value এবং অ্যাকাউন্ট ব্যালেন্স ও স্টপ লস অনুযায়ী সঠিক লট সাইজ হিসাব করা"
+    },
+    {
+      "id": "risk-management",
+      "title": "রিস্ক ম্যানেজমেন্ট",
+      "slug": "risk-management",
+      "description": "Stop Loss, Take Profit, Risk-Reward Ratio, Position Sizing, Drawdown Management, Daily Risk Limit এবং ১-২% রিস্ক রুল"
+    },
+    {
+      "id": "psychology",
+      "title": "ট্রেডিং সাইকোলজি",
+      "slug": "psychology",
+      "description": "ইমোশন কন্ট্রোল, FOMO, Overtrading, Revenge Trading, Discipline ও Patience বজায় রাখার কৌশল"
+    },
+    {
+      "id": "trading-plan",
+      "title": "ট্রেডিং প্ল্যান তৈরি",
+      "slug": "trading-plan",
+      "description": "কখন ট্রেড করবে, কোন পেয়ারে করবে, এন্ট্রি-এক্সিট রুল, রিস্ক রুল এবং ব্যক্তিগত চেকলিস্ট তৈরি"
+    },
+    {
+      "id": "trade-journal",
+      "title": "ট্রেড জার্নাল",
+      "slug": "trade-journal",
+      "description": "প্রতিটি ট্রেডের Screenshot, Entry, Exit, Stop Loss, Take Profit, লজিক ও ফলাফল সংরক্ষণ"
+    },
+    {
+      "id": "demo-practice",
+      "title": "ডেমো প্র্যাকটিস",
+      "slug": "demo-practice",
+      "description": "ডেমো অ্যাকাউন্টে ধারাবাহিক প্র্যাকটিস, উইন-রেট মূল্যায়ন এবং রিয়েল ট্রেডিংয়ের মানসিক প্রস্তুতি"
+    },
+    {
+      "id": "strategy",
+      "title": "ট্রেডিং স্ট্র্যাটেজি ব্যাকটেস্টিং",
+      "slug": "strategy",
+      "description": "Price Action, Indicators, Risk Management এবং Trading Plan একত্রে ব্যবহার করে নিজের স্ট্র্যাটেজি তৈরি ও ব্যাকটেস্ট করা"
+    },
+    {
+      "id": "real-trading",
+      "title": "রিয়েল ট্রেডিং শুরু",
+      "slug": "real-trading",
+      "description": "ডেমো থেকে রিয়েল অ্যাকাউন্টে যাওয়ার সঠিক সময়, ছোট সেন্ট/মাইক্রো লটে শুরু করা এবং দীর্ঘমেয়াদি সফলতার গাইডলাইন"
+    }
+  ]
+}
